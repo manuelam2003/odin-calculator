@@ -6,42 +6,55 @@
 } */
 
 * {
-    font-family: 'Courier New', Courier, monospace;
-    background-color: #ededed;
-    color: #333;
-    font-size: 30px;
+  font-family: "Courier New", Courier, monospace;
+  background-color: azure;
+  color: black;
+  font-size: 30px;
 }
 
 .calculator {
-    width: 300px;
-    margin: 200px auto;
-    border: 2px solid red;
-    padding: 10px;
+  width: 500px;
+  margin: 50px auto;
+  border: 10px solid black;
+  padding: 10px;
 }
 
 .row {
-    display: flex;
-    justify-content: center;
-    gap: 2px;
-    align-items: center;
-    margin: 2px;
-}
-
-button {
-    background-color: aliceblue;
-    width: 75px;
-    height: 75px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
+  gap: 2px;
+  align-items: center;
+  margin: 2px;
 }
 
 #screen {
-    background-color: aliceblue;
-    margin-bottom: 10px;
-    text-align: end;
-    font-size: 40px;
-    border-radius: 6px;
-    padding: 10px;
+  background-color: aliceblue;
+  margin-bottom: 10px;
+  text-align: end;
+  font-size: 50px;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+button {
+  background-color: #ff8f1f;
+  width: 125px;
+  height: 125px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button:active {
+  background-color: #a5580a;
+  color: white;
+}
+
+.numBtn {
+  background-color: #217c7e;
+}
+
+.numBtn:active {
+  background-color: #0d4849;
 }
