@@ -1,29 +1,13 @@
-function add(a, b) {
-  return Number(a) + Number(b);
-}
-
-function substract(a, b) {
-  return a - b;
-}
-
-function multiply(a, b) {
-  return a * b;
-}
-
-function divide(a, b) {
-  return a / b;
-}
-
 function operate(operator, a, b) {
   switch (operator) {
     case "+":
-      return add(a, b);
+      return Number(a) + Number(b);
     case "-":
-      return substract(a, b);
+      return a - b;
     case "*":
-      return multiply(a, b);
+      return a * b;
     case "/":
-      return divide(a, b);
+      return a / b;
   }
 }
 
@@ -63,7 +47,11 @@ const equalBtn = document.querySelector("#equal");
 
 numButtons.forEach((item) => {
   item.addEventListener("click", () => {
-    screen.innerHTML += `${item.innerHTML}`;
+    if (screen.innerHTML == "NaN" || screen.innerHTML == 0) {
+      screen.innerHTML = `${item.innerHTML}`;
+    } else {
+      screen.innerHTML += `${item.innerHTML}`;
+    }
   });
 });
 
@@ -72,12 +60,11 @@ opButtons.forEach((item) => {
     screen.innerHTML += `${item.innerHTML}`;
   });
 });
-// clearBtn.addEventListener("click", () => {
-//   screen.innerHTML = "0";
-// });
 
-clearBtn.onclick = () => clearScreen()
+clearBtn.onclick = () => clearScreen();
 
 equalBtn.onclick = () => calculator2(screen.innerHTML);
 
 // include function where it prompts equal after clicking operation if input already contains one
+
+function calculator3(input) {}
